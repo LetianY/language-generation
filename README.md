@@ -6,7 +6,11 @@ This is a NLP project for language generation. Research paper summary and possib
 
 ### Zero-shot learning
 
-xxxxxx
+Zero-shot learning (ZSL) refers to the setting that the learner observes testing sample classes not existing in the 
+training set. Zero-shot methods generally work by associating observed and non-observed classes through some form 
+of auxiliary information, which encodes observable distinguishing properties of objects.
+
+This problem is widely studied in computer vision, natural language processing, and machine perception.
 
 ## Paper Reading
 
