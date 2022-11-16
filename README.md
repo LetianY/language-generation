@@ -120,5 +120,38 @@ extraction)
     - Requires both unstructured texts and knowledge graphs
     - Model needs to detect mentions of head entity and tail entity and determine semantic relationship
     - Consider both the dependency information and the logical relationship in the triple
-    - First find candidate triples in knowledge graph, 
-    
+
+
+3. _Pre-training Process_
+
+- **Algorithm**:
+  - Progressive training: start from small and efficient model 
+  - two-stage training with a reduced sequence length (BERT); increase batch size linearly; change regularization 
+  factors stage-wise w.r.t the input size
+  - Adjust the training regularization factors
+  - To further improve convergence speed of the training process, we propose to adjust the training regularization 
+  factors in a more comprehensive and smooth way by progressively and simultaneously increasing the training factors 
+  including the input sequence length, the batch size, the learning rate and the dropout rate
+
+- **Data**:
+  - a large-scale, wide-variety and high-quality Chinese text corpora (4TB storage size in 11 different categories)
+  - Deduplication: character (drop consecutive identical ones), paragraph and document level; MD5 to filter
+  - Filtered sentence with less than 10 words
+  - Sentence segmentation using regular expressions; word segmentation based on baidu's tool
+  - Multiplied datasets
+
+- **Settings**:
+  - Transformer-XL structure
+  - Universal module: 48 layers, 4096 hidden units and 64 heads
+  - Task-specific module: 12 layers, 768 hidden units and 12 heads
+  - Total 10 billion parameters
+  - Activation function: GeLU
+  - Max sequence length: 512
+  - Max memory length: 128
+  - Total batch size of all pre-trained tasks: 6144
+  - Adam with lr = le-4, beta1 = 0.9, beta2 = 0.999, L2 weight decay = 0.01
+  - learning rate warmup over the first 10,000 steps + progressive learning
+  - linear decay of learning rate
+  - Parameter sharding
+
+4. _Experiments_
