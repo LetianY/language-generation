@@ -89,4 +89,36 @@ extraction)
 
 2. _Pre-training Tasks_
 
+- Word-aware Tasks:
+  - **Knowledge Masked Language Modelling**:
+  **(NLU Network, to improve capacity to capture lexical information)**
+    - ERNIE 1.0
+    - to enhance representation
+    - phase masking, named entity masking to learn dependency information locally and globally
+  - **Document Language Modelling (NLG Network, to enable various generation styles)**: 
+    - traditional language model (GPT, GPT-2, to abate the network complexity and heighten the effectiveness of 
+    unified pre-training)
+    - sequence-to-sequence language model (BERT, T5, ERNIE-GEN, auxiliary decoder structure) as pre-training task
+    - Enhanced Recurrence Memory Mechanism (ERNIE-Doc) to handel larger effective context length 
+    (shifting-one-layer-downwards recurrence --> same-layer recurrence)
 
+- Structure-aware Tasks (to strengthen the ability of capturing syntactic information):
+  - **Sentence Reordering (NLU Network)**:
+    - to learn relationship between sentences b reorganizing permuted segments
+    - shuffle combinations by a random permuted order
+    - k-classification problem: k = sum_{n!}
+  - **Sentence Distance (NLU Network)**:
+    - Extension of next sentence prediction (NSP)
+    - to learn sentence level information
+    - 3-class classification task: 2-sentences adjacent, non-adj but within same document, from two documents
+
+- Knowledge-aware Tasks (to improve knowledge memorization and reasoning):
+![img_1.png](img_1.png)
+  - **Universal Knowledge-Text Prediction (UKTP, NLU Network)**:
+    - To incorporate knowledge into one pre-train language model
+    - Extension of knowledge masked language modeling (only requiring unstructured texts)
+    - Requires both unstructured texts and knowledge graphs
+    - Model needs to detect mentions of head entity and tail entity and determine semantic relationship
+    - Consider both the dependency information and the logical relationship in the triple
+    - First find candidate triples in knowledge graph, 
+    
