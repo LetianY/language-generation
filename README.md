@@ -134,6 +134,7 @@ extraction)
   including the input sequence length, the batch size, the learning rate and the dropout rate
 
 - **Data**:
+![img_2.png](img_2.png)
   - a large-scale, wide-variety and high-quality Chinese text corpora (4TB storage size in 11 different categories)
   - Deduplication: character (drop consecutive identical ones), paragraph and document level; MD5 to filter
   - Filtered sentence with less than 10 words
