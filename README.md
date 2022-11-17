@@ -86,6 +86,8 @@ extraction)
 - Mitigate the dilemma: large-scale pre-trained models are difficult to implement with limited time and resources
   - Can update the parameter of task-specific network only during fine-tuning phase
 
+![img_3.png](img_3.png)
+
 
 2. _Pre-training Tasks_
 
@@ -156,3 +158,9 @@ extraction)
   - Parameter sharding
 
 4. _Experiments_
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+![img_8.png](img_8.png)
+
