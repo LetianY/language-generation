@@ -4,7 +4,7 @@ This is a NLP project for language generation. Research paper summary and possib
 
 ## Concepts Integration
 
-### Zero-shot learning
+### 1. Zero-shot learning
 
 Zero-shot learning (ZSL) refers to the setting that the learner observes testing sample classes not existing in the 
 training set. Zero-shot methods generally work by associating observed and non-observed classes through some form 
@@ -15,7 +15,7 @@ This problem is widely studied in computer vision, natural language processing, 
 
 ## Paper Reading
 
-### ERNIE 3.0:  LARGE-SCALE KNOWLEDGE ENHANCED PRE-TRAINING FOR LANGUAGE UNDERSTANDING AND GENERATION
+### 1. ERNIE 3.0:  LARGE-SCALE KNOWLEDGE ENHANCED PRE-TRAINING FOR LANGUAGE UNDERSTANDING AND GENERATION
 
 - **Introduction**
 
@@ -157,10 +157,45 @@ extraction)
   - linear decay of learning rate
   - Parameter sharding
 
+
 4. _Experiments_
 ![img_4.png](img_4.png)
 ![img_5.png](img_5.png)
 ![img_6.png](img_6.png)
 ![img_7.png](img_7.png)
 ![img_8.png](img_8.png)
+
+
+5. _References_
+- [Hugging Face ERNIE 3.0](https://huggingface.co/nghuyong/ernie-3.0-base-zh)
+- [ERNIE Model Document](https://paddlenlp.readthedocs.io/zh/latest/model_zoo/transformers/ERNIE/contents.html)
+- [Github Page Pytorch](https://github.com/nghuyong/ERNIE-Pytorch)
+
+
+
+### 2. [Text Generation from Knowledge Graphs with Graph Transformers](https://arxiv.org/pdf/1904.02342.pdf)
+
+- **Introduction**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
