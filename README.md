@@ -183,10 +183,21 @@ extraction system (knowledge graph). Such tasks face various challenges posed by
 such as the non-hierarchical nature, collapsing of long-distance dependencies and structural variety. The proposed
 transforming encoder could leverage the relational structure without imposing linearization or hierarchical constraints.
 
-- **Related Work**
+- **Model**
+
+1. _Model Overview: Encoder-decoder architecture_
+
+![img_9.png](img_9.png)
+
+- Input: Title and knowledge graph, encoded using bidirectional recurrent neural network + Graph Transformer
+- Decoder: vector from hidden layer;
+  Each step output wt, selected by its vocabulary or by copying an entity from the knowledge graph;
+- Model: end-to-end training, minimize negative log likelihood
+
+2. _Encoder_
 
 
-
+3. _Decoder_
 
 
 
